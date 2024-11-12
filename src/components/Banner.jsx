@@ -4,11 +4,11 @@ import Navbar from './Navbar';
 import LoginedNavbar from './LoginedNavbar'; 
 
 function Banner() {
-  const currentUser = useSelector((state) => state.auth.user); 
+  // const currentUser = useSelector((state) => state.auth.user); 
 
   return (
     <div className="relative">
-      {currentUser ? <LoginedNavbar position='absolute' /> : <Navbar position='absolute' />}
+      {/* {currentUser ? <LoginedNavbar position='absolute' /> : <Navbar position='absolute' />} */}
       <img 
         src={`${process.env.PUBLIC_URL}/images/Rectangle.png`} 
         alt="" 

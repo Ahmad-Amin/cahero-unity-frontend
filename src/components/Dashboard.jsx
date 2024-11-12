@@ -4,6 +4,8 @@ import UpcomingWebinars from "../pages/UpcomingWebinars";
 import Recommendedbooks from "../pages/Recommendedbooks";
 import Latestlectures from "../pages/Latestlectures";
 import { Box } from "@mui/material";
+import Navbar from "./Navbar";
+import Members from "./Members";
 
 const drawerWidth = 280;
 
@@ -34,10 +36,11 @@ const Dashboard = () => {
             zIndex: 1,
           }}
         />
+        <Navbar position='absolute' />
 
-        <Box className="w-full" sx={{ position: "relative", zIndex: 2 }}>
+        {/* <Box className="w-full" sx={{ position: "relative", zIndex: 2 }}>
           <Banner />
-        </Box>
+        </Box> */}
 
         <Box
           sx={{
@@ -49,7 +52,7 @@ const Dashboard = () => {
           <UpcomingWebinars />
         </Box>
 
-        <Box
+        {/* <Box
           sx={{
             position: "relative",
             zIndex: 2,
@@ -57,16 +60,26 @@ const Dashboard = () => {
           }}
         >
           <Recommendedbooks />
+        </Box> */}
+
+        <Box
+          sx={{
+            position: "relative",
+            zIndex: 2,
+            mt: { xs: 2, sm: 4 }, 
+          }}
+        >
+          <Latestlectures limit={2} />
         </Box>
 
         <Box
           sx={{
             position: "relative",
             zIndex: 2,
-            mt: { xs: 4, sm: 8 }, 
+            mt: { xs: 2, sm: 4 }, 
           }}
         >
-          <Latestlectures limit={3} />
+          <Members/>
         </Box>
       </Box>
     </>

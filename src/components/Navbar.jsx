@@ -20,30 +20,30 @@ const style = {
 };
 
 function Navbar({ position = "relative" }) {
-  const [showSignIn, setShowSignIn] = useState(false);
-  const [showSignUp, setShowSignUp] = useState(false);
+  // const [showSignIn, setShowSignIn] = useState(false);
+  // const [showSignUp, setShowSignUp] = useState(false);
   
-  const dispatch = useDispatch(); 
-  const currentUser = useSelector((state) => state.auth.user); 
+  // const dispatch = useDispatch(); 
+  // const currentUser = useSelector((state) => state.auth.user); 
 
-  const toggleSignIn = () => {
-    setShowSignIn(true);
-    setShowSignUp(false);
-  };
+  // const toggleSignIn = () => {
+  //   setShowSignIn(true);
+  //   setShowSignUp(false);
+  // };
 
-  const toggleSignUp = () => {
-    setShowSignUp(true);
-    setShowSignIn(false);
-  };
+  // const toggleSignUp = () => {
+  //   setShowSignUp(true);
+  //   setShowSignIn(false);
+  // };
 
-  const closeModal = () => {
-    setShowSignIn(false);
-    setShowSignUp(false);
-  };
+  // const closeModal = () => {
+  //   setShowSignIn(false);
+  //   setShowSignUp(false);
+  // };
 
-  const handleLogout = () => {
-    dispatch(logout()); 
-  };
+  // const handleLogout = () => {
+  //   dispatch(logout()); 
+  // };
 
   return (
     <div className={`w-full h-20 flex items-center justify-end bg-transparent ${position} mt-10 md:mt-0`}>
@@ -52,7 +52,7 @@ function Navbar({ position = "relative" }) {
       
 
       <div className="flex items-center justify-end">
-        {currentUser ? ( 
+        {/* {currentUser ? ( 
 
           <button className="w-24 py-2 hover:font-semibold hover:scale-[1.05] text-white bg-red-700 hover:bg-red-800 ease-in-out transition duration-300 flex items-center justify-center mx-5 rounded-lg" onClick={handleLogout}>
             <h1
@@ -63,10 +63,10 @@ function Navbar({ position = "relative" }) {
           </button>
           
         ) : (
-          <>
+          <> */}
             <div className=" w-20 text-white flex items-center">
               <button
-                onClick={toggleSignIn}
+                // onClick={toggleSignIn}
                 className="text-white hover:font-semibold hover:scale-[1.05] ease-in-out transition duration-300"
               >
                 Sign in
@@ -74,17 +74,17 @@ function Navbar({ position = "relative" }) {
             </div>
             <div className="h-18 w-20 text-white flex items-center">
               <button
-                onClick={toggleSignUp}
+                // onClick={toggleSignUp}
                 className="text-white hover:font-semibold hover:scale-[1.05] ease-in-out transition duration-300"
               >
                 Sign up
               </button>
             </div>
-          </>
-        )}
+          {/* </>
+        )} */}
       </div>
 
-      <div>
+      {/* <div>
         <Modal
           open={showSignIn}
           onClose={closeModal}
@@ -106,7 +106,7 @@ function Navbar({ position = "relative" }) {
             <SignUpForm onClose={closeModal} toggleSignIn={toggleSignIn} />
           </Box>
         </Modal>
-      </div>
+      </div> */}
     </div>
   );
 }

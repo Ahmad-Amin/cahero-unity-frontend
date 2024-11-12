@@ -44,24 +44,13 @@ export default function Homepage({ window }) {
 
   const menuItems = [
     { text: "Dashboard", icon: <DashboardIcon />, link: "/" },
-    { text: "Webinar", icon: <VideoLibraryIcon />, link: "/webinar" },
-    { text: "Books", icon: <LibraryBooksIcon />, link: "/all-books" },
-    {
-      text: "Documentaries",
-      icon: <VideoLibraryIcon />,
-      link: "/documentaries",
-    },
-    { text: "Profile Settings", icon: <TuneIcon />, link: "/profile-settings" },
-    {
-      text: "Subscription Plans",
-      icon: <CalendarTodayIcon />,
-      link: "/subscription-plans",
-    },
+    { text: "Event Workshop", icon: <VideoLibraryIcon />, link: "/event-workshop" },
+    { text: "Knowledge Hub", icon: <LibraryBooksIcon />, link: "/knowledge-hub" },
     {
       text: "Community",
-      icon: <GroupsIcon/>,
-      link: "/community"
-    }
+      icon: <VideoLibraryIcon />,
+      link: "/coummunity",
+    },
   ];
 
   const drawer = (
@@ -69,7 +58,7 @@ export default function Homepage({ window }) {
       <div className="p-2 flex items-center">
         <Link to={"/"}>
           <img
-            src={`${process.env.PUBLIC_URL}/images/Cahero_Legacy.png`}
+            src={`${process.env.PUBLIC_URL}/images/Cahero_Unity.png`}
             alt="Logo"
             className="h-auto w-auto"
           />
@@ -113,7 +102,7 @@ export default function Homepage({ window }) {
                   <ListItemText
                     primary={item.text}
                     primaryTypographyProps={{
-                      fontSize: 16,
+                      fontSize: 15,
                       fontWeight: isActive ? "bold" : "normal",
                       color: "white",
                       marginLeft: "8px",
