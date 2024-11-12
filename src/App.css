@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+.container {
+  width: 100%; /* Ensure the container takes full width */
+  padding: 0 16px; /* Optional horizontal padding */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%);
+  cursor: pointer; /* Optional: change cursor to pointer for better UX */
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%);
+  cursor: pointer; /* Optional: change cursor to pointer for better UX */
+}
+
+svg.star-svg {
+  display: inline;
+}
+
+
+.Example input,
+.Example button {
+  font: inherit;
+}
+
+.Example header {
+  background-color: #323639;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  color: white;
+}
+
+.Example header h1 {
+  font-size: inherit;
+  margin: 0;
+}
+
+.Example__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Example__container__load {
+  margin-top: 1em;
+  color: white;
+}
+
+.Example__container__document {
+  width: 100%;
+  max-width: calc(100% - 2em);
+}
+
+.Example__container__document .react-pdf__Document {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Example__container__document .react-pdf__Page {
+  margin: 1em 0;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.Example__container__document .react-pdf__message {
+  padding: 20px;
+  color: white;
+}
